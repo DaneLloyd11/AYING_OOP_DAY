@@ -12,11 +12,15 @@ public class LabActivity12 {
         System.out.print("Enter Your Message: ");
         String txt = Data.nextLine();
         int detect = 0;
+        String[] words = txt.split("\\s+");
         
-        if (txt.length() >= 2 && Character.isUpperCase(txt.charAt(0)) && Character.isUpperCase(txt.charAt(1))) {
+        for(String word : words)
+        {
+        if (word.length() >= 2 && Character.isUpperCase(word.charAt(0)) && Character.isUpperCase(word.charAt(1))) {
             detect = 1;
+            break;
         } 
-        
+        }
         
         if(detect == 1)
         {
